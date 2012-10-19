@@ -130,6 +130,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\AppDemo\AppDemoAreaRegistration.cs" />
     <Compile Include="Areas\AppDemo\Controllers\AppController.cs" />
+    <Compile Include="Areas\Templates\TemplatesAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -161,6 +162,15 @@
     <Content Include="Areas\AppDemo\Views\Shared\_Footer.cshtml" />
     <Content Include="Areas\AppDemo\Views\_ViewStart.cshtml" />
     <Content Include="Areas\AppDemo\Views\Shared\_Foundation.cshtml" />
+    <Content Include="Areas\Templates\Views\Web.config" />
+    <Content Include="Areas\Templates\Views\BrandedTemplate.cshtml" />
+    <Content Include="Areas\Templates\Views\BlogTemplate.cshtml" />
+    <Content Include="Areas\Templates\Views\FeedTemplate.cshtml" />
+    <Content Include="Areas\Templates\Views\GridTemplate.cshtml" />
+    <Content Include="Areas\Templates\Views\HomePage.cshtml" />
+    <Content Include="Areas\Templates\Views\SideBar.cshtml" />
+    <Content Include="Areas\Templates\Views\ContactTemplate.cshtml" />
+    <Content Include="Areas\Templates\Views\Index.cshtml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="humans.txt" />
     <Content Include="Ipsum_examples.txt" />
@@ -213,6 +223,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\AppDemo\Models\" />
+    <Folder Include="Areas\Templates\Controllers\" />
+    <Folder Include="Areas\Templates\Models\" />
+    <Folder Include="Areas\Templates\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
