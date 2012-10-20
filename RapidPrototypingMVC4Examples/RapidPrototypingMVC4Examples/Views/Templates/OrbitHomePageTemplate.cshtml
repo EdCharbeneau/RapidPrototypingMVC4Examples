@@ -1,0 +1,98 @@
+﻿@using Prototyping.Ipsum
+@using Prototyping.Placeholdit
+<!-- Header and Nav -->
+
+<div class="row">
+    <div class="three columns">
+        <h1>@Html.Placehold(400, 100, "Logo")</h1>
+    </div>
+    <div class="nine columns">
+        @Html.Ipsum().ul(4, 2, true, new { @class = "nav-bar right" })
+    </div>
+</div>
+
+<!-- End Header and Nav -->
+
+<!-- First Band (Slider) -->
+<!-- The Orbit slider is initialized at the bottom of the page by calling .orbit() on #slider -->
+
+<div class="row">
+    <div class="twelve columns">
+        <div id="slider">
+            @Html.Placehold(1000, 400, "[img 1]")
+            @Html.Placehold(1000, 400, "[img 2]")
+            @Html.Placehold(1000, 400, "[img 3]")
+            @Html.Placehold(1000, 400, "[img 4]")
+        </div>
+
+        <hr />
+    </div>
+</div>
+
+<!-- Three-up Content Blocks -->
+
+<div class="row">
+
+    <div class="four columns">
+        @Html.Placehold(400, 300, "[img]")
+        <h4>This is a content section.</h4>
+        @Html.Ipsum().p()
+    </div>
+
+    <div class="four columns">
+        @Html.Placehold(400, 300, "[img]")
+        <h4>This is a content section.</h4>
+        @Html.Ipsum().p()
+    </div>
+
+    <div class="four columns">
+        @Html.Placehold(400, 300, "[img]")
+        <h4>This is a content section.</h4>
+        @Html.Ipsum().p()
+    </div>
+
+</div>
+
+<!-- Call to Action Panel -->
+<div class="row">
+    <div class="twelve columns">
+
+        <div class="panel">
+            <h4>Get in touch!</h4>
+
+            <div class="row">
+                <div class="nine columns">
+                    <p>We'd love to hear from you, you attractive person you.</p>
+                </div>
+                <div class="three columns">
+                    <a href="#" class="radius button right">Contact Us</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Footer -->
+
+<footer class="row">
+    <div class="twelve columns">
+        <hr />
+        <div class="row">
+            <div class="six columns">
+                <p>&copy; Copyright no one at all. Go to town.</p>
+            </div>
+            <div class="six columns">
+                @Html.Ipsum().ul(4, 2, true, new { @class = "link-list right" })
+            </div>
+        </div>
+    </div>
+</footer>
+
+@section scripts{
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('#slider').orbit();
+        });
+    </script>
+}

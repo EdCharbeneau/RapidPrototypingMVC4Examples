@@ -8,11 +8,33 @@
     <section>
         <ul class="left">
             <li><a href="@Url.Action("ExampleOne", new { area = "", controller = "Home" })" class="main">Example 1</a></li>
+            <li class="divider"></li>
             <li><a href="@Url.Action("ExampleTwo", new { area = "", controller = "Home" })" class="main">Example 2</a></li>
+            <li class="divider"></li>
             <li><a href="@Url.Action("ExampleThree", new { area = "", controller = "Home" })" class="main">Example 3</a></li>
+            <li class="divider"></li>
             <li><a href="@Url.Action("ExampleFour", new { area = "", controller = "Home" })" class="main">Example 4</a></li>
+            <li class="divider"></li>
             <li><a href="@Url.Action("ExampleFive", new { area = "", controller = "Home" })" class="main">Example 5</a></li>
+            <li class="divider"></li>
             <li><a href="@Url.Action("ExampleSix", new { area = "", controller = "Home" })" class="main">Example 6</a></li>
+            <li class="divider"></li>
+            <li class="has-dropdown">
+                <a class="active" href="#">Templates</a>
+                <ul class="dropdown">
+                    <li><a href="@Url.Action("BandedTemplate", new { area = "", controller = "Templates" })">Banded</a></li>
+                    <li><a href="@Url.Action("BlogTemplate", new { area = "", controller = "Templates" })">Blog</a></li>
+                    <li><a href="@Url.Action("FeedTemplate", new { area = "", controller = "Templates" })">Feed</a></li>
+                    <li><a href="@Url.Action("GridTemplate", new { area = "", controller = "Templates" })">Grid</a></li>
+                    <li><a href="@Url.Action("OrbitHomePageTemplate", new { area = "", controller = "Templates" })">Orbit Home</a></li>
+                    <li><a href="@Url.Action("HomePageTemplate", new { area = "", controller = "Templates" })">Banner Home</a></li>
+                    <li><a href="@Url.Action("SideBarTemplate", new { area = "", controller = "Templates" })">SideBar</a></li>
+                    <li><a href="@Url.Action("ContactTemplate", new { area = "", controller = "Templates" })">Contact</a></li>
+                    <li class="divider"></li>
+                    <li><a href="@Url.Action("Index", new { area = "", controller = "Templates" })">See all &rarr;</a></li>
+                </ul>
+            </li>
+
         </ul>
 
         <ul class="right">

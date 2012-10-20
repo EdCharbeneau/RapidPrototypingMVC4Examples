@@ -1,0 +1,99 @@
+﻿@using Prototyping.Ipsum
+@using Prototyping.Placeholdit
+<!-- Nav Bar -->
+
+<div class="row">
+    <div class="twelve columns">
+        @Html.Ipsum().ul(4, 2, true, new { @class = "nav-bar" })
+        <h1>Blog <small>This is my blog. It's awesome.</small></h1>
+        <hr />
+    </div>
+</div>
+
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="nine columns" role="content">
+
+        <article>
+
+            <h3><a href="#">Blog Post Title</a></h3>
+            <h6>Written by <a href="#">John Smith</a> on August 12, 2012.</h6>
+
+            <div class="row">
+                <div class="six columns">
+                    @Html.Ipsum().p().p()
+                </div>
+                <div class="six columns">
+                    @Html.Placehold(400, 240, "[img]")
+                </div>
+            </div>
+            @Html.Ipsum().p().p()
+        </article>
+
+        <hr />
+
+        <article>
+
+            <h3><a href="#">Blog Post Title</a></h3>
+            <h6>Written by <a href="#">John Smith</a> on August 12, 2012.</h6>
+
+            <div class="row">
+                <div class="six columns">
+                    @Html.Ipsum().p().p()
+                </div>
+                <div class="six columns">
+                    @Html.Placehold(400, 240, "[img]")
+                </div>
+            </div>
+
+            @Html.Ipsum().p().p()
+        </article>
+
+    </div>
+
+    <!-- End Main Content -->
+
+
+    <!-- Sidebar -->
+
+    <aside class="three columns">
+
+        <h5>Categories</h5>
+        @Html.Ipsum().ul(5, 1, true, new { @class = "side-nav" })
+
+        <div class="panel">
+            @Html.Ipsum().h5().p()
+            <a href="#">Read More &rarr;</a>
+        </div>
+
+    </aside>
+
+    <!-- End Sidebar -->
+</div>
+
+<!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+
+<footer class="row">
+    <div class="twelve columns">
+        <hr />
+        <div class="row">
+            <div class="six columns">
+                <p>&copy; Copyright no one at all. Go to town.</p>
+            </div>
+            <div class="six columns">
+                @Html.Ipsum().ul(4, 2, true, new { @class = "link-list right" })
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- End Footer -->

@@ -1,8 +1,98 @@
-﻿<div class="fndtn-templates add-ons">
+﻿@section head
+{
+    <style>
+        /* Templates */
+        span.f-temp.label {
+            cursor: pointer;
+        }
+
+        #fndTemps {
+            display: none;
+        }
+
+            #fndTemps .template input[type=checkbox] {
+                display: none;
+            }
+
+        .fndtn-templates div > div > a {
+            display: block;
+            border: solid 1px #eee;
+            height: 200px;
+            overflow: hidden;
+        }
+
+            .fndtn-templates div > div > a:hover {
+                border-color: #c8c8c8;
+            }
+
+                .fndtn-templates div > div > a:hover .template-dl {
+                    display: block;
+                }
+
+            .fndtn-templates div > div > a .template {
+                height: 200px;
+                padding: 5px;
+            }
+
+                .fndtn-templates div > div > a .template > .row .columns, .fndtn-templates div > div > a .template > .row .column {
+                    padding: 0 6px;
+                }
+
+            .fndtn-templates div > div > a + p {
+                color: #777;
+            }
+
+            .fndtn-templates div > div > a.selected {
+                color: #222;
+                border: solid 1px #79cae3;
+                -webkit-box-shadow: 0 0 6px rgba(43, 166, 203, 0.5);
+                -moz-box-shadow: 0 0 6px rgba(43, 166, 203, 0.5);
+                box-shadow: 0 0 6px rgba(43, 166, 203, 0.5);
+            }
+
+                .fndtn-templates div > div > a.selected + p {
+                    color: #222;
+                }
+
+        .fndtn-templates .display {
+            background-color: #ddd;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .fndtn-templates.add-ons div > div > a .template > .row .column, .fndtn-templates.add-ons div > div > a .template > .row .columns {
+            padding: 0 2.5px;
+        }
+
+            .fndtn-templates.add-ons div > div > a .template > .row .column:first-child, .fndtn-templates.add-ons div > div > a .template > .row .columns:first-child {
+                padding-left: 15px;
+            }
+
+            .fndtn-templates.add-ons div > div > a .template > .row .column:last-child, .fndtn-templates.add-ons div > div > a .template > .row .columns:last-child {
+                padding-right: 15px;
+            }
+
+        .fndtn-templates.add-ons div > div > a .template .hover-actions.buttons {
+            height: inherit;
+        }
+
+        .fndtn-templates.add-ons div > div > a + p {
+            color: #222;
+        }
+    </style>
+}
+<div class="row">
+    <div class="twelve columns">
+        <h2>Prototyping templates</h2>
+        <p>Adapted for MVC using the Foundation HTML templates from <a href="http://foundation.zurb.com/templates.php">the Foundation framework website.</a></p>
+        <p>View the .cshtml files in this project and use the source code in your next project.</p>
+    </div>
+</div>
+<div class="fndtn-templates add-ons">
     <div class="row">
 
         <div class="three mobile-one columns">
-            <a href="page-templates/banded.html">
+            <a href="@Url.Action("BandedTemplate", new { area = "", controller = "Templates" })">
                 <div class="template">
                     <div class="row">
                         <div class="three columns">
@@ -37,12 +127,11 @@
             </a>
             <p class="get-code">
                 Banded
-                <span><a href="#" data-reveal-id="bandedModal">See HTML</a></span>
             </p>
         </div>
 
         <div class="three mobile-one columns">
-            <a href="page-templates/blog.html">
+            <a href="@Url.Action("BlogTemplate", new { area = "", controller = "Templates" })">
                 <div class="template">
                     <div class="row">
                         <div class="twelve columns">
@@ -67,12 +156,11 @@
             </a>
             <p class="get-code">
                 Blog
-                <span><a href="#" data-reveal-id="blogModal">See HTML</a></span>
             </p>
         </div>
 
         <div class="three mobile-one columns">
-            <a href="page-templates/feed.html">
+            <a href="@Url.Action("FeedTemplate", new { area = "", controller = "Templates" })">
                 <div class="template">
                     <div class="row">
                         <div class="twelve columns">
@@ -165,12 +253,11 @@
             </a>
             <p class="get-code">
                 Feed
-                <span><a href="#" data-reveal-id="feedModal">See HTML</a></span>
             </p>
         </div>
 
         <div class="three mobile-one columns">
-            <a href="page-templates/grid.html">
+            <a href="@Url.Action("GridTemplate", new { area = "", controller = "Templates" })">
                 <div class="template">
                     <div class="row">
                         <div class="display" style="width: 100%; height: 12px;"></div>
@@ -228,7 +315,6 @@
             </a>
             <p class="get-code">
                 Grid
-                <span><a href="#" data-reveal-id="gridModal">See HTML</a></span>
             </p>
         </div>
 
@@ -237,7 +323,7 @@
     <div class="row">
 
         <div class="three mobile-one columns">
-            <a href="page-templates/homepage-1.html">
+            <a href="@Url.Action("OrbitHomePageTemplate", new { area = "", controller = "Templates" })">
                 <div class="template">
                     <div class="row">
                         <div class="three columns">
@@ -272,12 +358,11 @@
             </a>
             <p class="get-code">
                 Orbit Home
-                <span><a href="#" data-reveal-id="orbitHomeModal">See HTML</a></span>
             </p>
         </div>
 
         <div class="three mobile-one columns">
-            <a href="page-templates/homepage-2.html">
+            <a href="@Url.Action("HomePageTemplate", new { area = "", controller = "Templates" })">
                 <div class="template">
                     <div class="row">
                         <div class="twelve columns">
@@ -332,12 +417,11 @@
             </a>
             <p class="get-code">
                 Banner Home
-                <span><a href="#" data-reveal-id="bannerHomeModal">See HTML</a></span>
             </p>
         </div>
 
         <div class="three mobile-one columns">
-            <a href="page-templates/sidebar.html">
+            <a href="@Url.Action("SideBarTemplate", new { area = "", controller = "Templates" })">
                 <div class="template">
                     <div class="row">
                         <div class="three columns">
@@ -373,12 +457,11 @@
             </a>
             <p class="get-code">
                 Sidebar
-                <span><a href="#" data-reveal-id="sidebarModal">See HTML</a></span>
             </p>
         </div>
 
         <div class="three mobile-one columns">
-            <a href="page-templates/contact.html">
+            <a href="@Url.Action("ContactTemplate", new { area = "", controller = "Templates" })">
                 <div class="template">
                     <div class="row">
                         <div class="display" style="width: 100%; height: 12px;"></div>
@@ -423,7 +506,6 @@
             </a>
             <p class="get-code">
                 Contact
-                <span><a data-reveal-id="contactModal" href="#">See HTML</a></span>
             </p>
         </div>
 

@@ -1,0 +1,145 @@
+﻿@using Prototyping.Ipsum
+@using Prototyping.Placeholdit
+<!-- Header and Nav -->
+
+<div class="row">
+    <div class="twelve columns">
+        <div class="panel">
+            <h1>Feed Template</h1>
+        </div>
+    </div>
+</div>
+
+<!-- End Header and Nav -->
+
+<div class="row">
+
+    <!-- Main Feed -->
+    <!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
+    <div class="six columns push-three">
+
+        <!-- Feed Entry -->
+        <div class="row">
+            <div class="two columns mobile-one">
+                @Html.Placehold(80, 80, "[img]")
+            </div>
+            <div class="ten columns">
+                <p><strong>Some Person said:</strong> @Html.Ipsum().Paragraphs(1)</p>
+                <ul class="link-list">
+                    <li><a href="">Reply</a></li>
+                    <li><a href="">Share</a></li>
+                </ul>
+
+                <h6>2 Comments</h6>
+                <div class="row">
+                    <div class="two columns mobile-one">
+                        @Html.Placehold(50, 50, "[img]")
+                    </div>
+                    <div class="ten columns">
+                        @Html.Ipsum().p()
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="two columns mobile-one">
+                        @Html.Placehold(50, 50, "[img]")
+                    </div>
+                    <div class="ten columns">
+                        @Html.Ipsum().p()
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Feed Entry -->
+
+        <hr />
+
+        <!-- Feed Entry -->
+        <div class="row">
+            <div class="two columns mobile-one">
+                @Html.Placehold(80, 80, "[img]")
+
+            </div>
+            <div class="ten columns">
+                <p><strong>Some Person said:</strong> @Html.Ipsum().Paragraphs(1)</p>
+                <ul class="link-list">
+                    <li><a href="">Reply</a></li>
+                    <li><a href="">Share</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Feed Entry -->
+
+        <hr />
+
+        <!-- Feed Entry -->
+        <div class="row">
+            <div class="two columns mobile-one">
+                @Html.Placehold(80, 80, "[img]")
+
+            </div>
+            <div class="ten columns">
+                <p><strong>Some Person said:</strong> @Html.Ipsum().Paragraphs(1)</p>
+                <ul class="link-list">
+                    <li><a href="">Reply</a></li>
+                    <li><a href="">Share</a></li>
+                </ul>
+
+                <h6>2 Comments</h6>
+                <div class="row">
+                    <div class="two columns mobile-one">
+                        @Html.Placehold(50, 50, "[img]")
+
+                    </div>
+                    <div class="ten columns">
+                        @Html.Ipsum().p()
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Feed Entry -->
+
+    </div>
+
+
+    <!-- Nav Sidebar -->
+    <!-- This is source ordered to be pulled to the left on larger screens -->
+    <div class="three columns pull-six">
+        <div class="panel">
+            <a href="#">
+                @Html.Placehold(300, 240, "[img]")
+            </a>
+            <h5><a href="#">Your Name</a></h5>
+            @Html.Ipsum().dl(6, 2, true, new { @class = "vertical tabs" })
+        </div>
+    </div>
+
+
+    <!-- Right Sidebar -->
+    <!-- On small devices this column is hidden -->
+    <aside class="three columns hide-for-small">
+        <p>
+            @Html.Placehold(300, 400, "[ad]")
+        </p>
+        <p>
+            @Html.Placehold(300, 400, "[ad]")
+        </p>
+    </aside>
+
+</div>
+
+
+<!-- Footer -->
+
+<footer class="row">
+    <div class="twelve columns">
+        <hr />
+        <div class="row">
+            <div class="six columns">
+                <p>&copy; Copyright no one at all. Go to town.</p>
+            </div>
+            <div class="six columns">
+                @Html.Ipsum().ul(4, 2, true, new { @class = "link-list right" })
+            </div>
+        </div>
+    </div>
+</footer>

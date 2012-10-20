@@ -1,0 +1,74 @@
+﻿@using Prototyping.Ipsum
+@using Prototyping.Placeholdit
+<!-- Header and Nav -->
+
+<div class="row">
+    <div class="three columns">
+        <h1>@Html.Placehold(400, 100, "Logo")</h1>
+    </div>
+    <div class="nine columns">
+        @Html.Ipsum().ul(4, 2, true, new { @class = "nav-bar right" })
+    </div>
+</div>
+
+<!-- End Header and Nav -->
+
+
+<!-- First Band (Image) -->
+
+<div class="row">
+    <div class="twelve columns">
+        @Html.Placehold(1000, 400, "[img]")
+        <hr />
+    </div>
+</div>
+
+
+<!-- Second Band (Image Left with Text) -->
+
+<div class="row">
+    <div class="four columns">
+        @Html.Placehold(400, 300, "[img]")
+    </div>
+    <div class="eight columns">
+        <h4>This is a content section.</h4>
+        <div class="row">
+            <div class="six columns">
+                @Html.Ipsum().p()
+            </div>
+            <div class="six columns">
+                @Html.Ipsum().p()
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Third Band (Image Right with Text) -->
+
+<div class="row">
+    <div class="eight columns">
+        <h4>This is a content section.</h4>
+        @Html.Ipsum().p().p()
+    </div>
+    <div class="four columns">
+        @Html.Placehold(400, 300, "[img]")
+    </div>
+</div>
+
+
+<!-- Footer -->
+
+<footer class="row">
+    <div class="twelve columns">
+        <hr />
+        <div class="row">
+            <div class="six columns">
+                <p>&copy; Copyright no one at all. Go to town.</p>
+            </div>
+            <div class="six columns">
+                @Html.Ipsum().ul(4, 2, true, new { @class = "link-list right" })
+            </div>
+        </div>
+    </div>
+</footer>
